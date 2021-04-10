@@ -2,7 +2,7 @@
 
 This repository contains the UI XML schema definitions for the World of Warcraft user interface system with a few tweaks that allows them be used for validating XML used by addons.
 
-Each client branch is represented as a seprate file at the root of this repository and can be referenced through the following `<Ui>` element at the root of an addons' XML document.
+Each client branch is represented as a separate file at the root of this repository and can be referenced through the following `<Ui>` element at the root of an addons' XML document.
 
 ```xml
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
