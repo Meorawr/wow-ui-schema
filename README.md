@@ -11,6 +11,8 @@ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI-Retail.xsd">
 </Ui>
 ```
 
+The XSD files provided by Blizzard and present here may be stricter than the ingame API actually allows, or may be missing a few things. PRs are welcome to provide adjustments as needed to match actual ingame behavior.
+
 ## Modifications
 
 These files are not precisely identical to the ones shipped by Blizzard in their interface code and have the following changes made.
