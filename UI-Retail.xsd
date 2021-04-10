@@ -1411,4 +1411,34 @@
 		<xs:attribute name="setToFinalAlpha" type="xs:boolean" default="false"/>
 	</xs:complexType>
 	<xs:element name="AnimationGroup" type="AnimationGroupType"/>
+
+    <!-- Intrinsics -->
+
+	<xs:complexType name="ContainedAlertFrameType">
+		<xs:complexContent>
+			<xs:extension base="ButtonType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ContainedAlertFrame" type="ContainedAlertFrameType" substitutionGroup="ui:Frame"/>
+
+	<xs:complexType name="ItemButtonType">
+		<xs:complexContent>
+			<xs:extension base="ButtonType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="ItemButton" type="ItemButtonType" substitutionGroup="ui:Frame"/>
+
+	<xs:complexType name="DropDownToggleButtonType">
+		<xs:complexContent>
+			<xs:extension base="ButtonType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="DropDownToggleButton" type="DropDownToggleButtonType" substitutionGroup="ui:Frame"/>
+
+	<xs:complexType name="EventButtonType">
+		<xs:complexContent>
+			<xs:extension base="ButtonType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EventButton" type="EventButtonType" substitutionGroup="ui:Frame"/>
 </xs:schema>
