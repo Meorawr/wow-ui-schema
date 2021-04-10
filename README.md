@@ -21,6 +21,6 @@ These files are not precisely identical to the ones shipped by Blizzard in their
 * Added `ScopedModifier` element support to the root `Ui` element.
 * Added the following intrinsic frame types:
   * ContainedAlertFrame
-  * ItemButton (Retail-only)
   * DropDownToggleButton (Retail-only)
   * EventButton (Retail-only)
+  * ItemButton (Retail-only)
