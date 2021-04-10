@@ -5,10 +5,9 @@ This repository contains the UI XML schema definitions for the World of Warcraft
 Each client branch is represented as a seprate file at the root of this repository and can be referenced through the following `<Ui>` tag at the root of an addons' XML document.
 
 ```xml
-<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/ https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI-Retail.xsd">
-
-    <!-- Your stuff goes here! -->
-
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+https://raw.githubusercontent.com/Meorawr/wow-ui-schema/main/UI-Retail.xsd">
+    <!-- Change the URL above if you're targetting a different client. -->
 </Ui>
 ```
 
