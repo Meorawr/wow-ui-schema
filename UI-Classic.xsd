@@ -236,8 +236,8 @@
 				<xs:element name="Offset" type="Dimension"/>
 			</xs:choice>
 		</xs:sequence>
-	<xs:attribute name="x" type="xs:float"/>
-	<xs:attribute name="y" type="xs:float"/>
+		<xs:attribute name="x" type="xs:float"/>
+		<xs:attribute name="y" type="xs:float"/>
 	</xs:complexType>
 
 	<xs:complexType name="GradientType">
