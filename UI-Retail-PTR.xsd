@@ -1430,10 +1430,24 @@
 	</xs:complexType>
 	<xs:element name="DropDownToggleButton" type="DropDownToggleButtonType" substitutionGroup="ui:Frame"/>
 
+	<xs:complexType name="EventFrameType">
+		<xs:complexContent>
+			<xs:extension base="FrameType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EventFrame" type="EventFrameType" substitutionGroup="ui:Frame"/>
+
 	<xs:complexType name="EventButtonType">
 		<xs:complexContent>
 			<xs:extension base="ButtonType"/>
 		</xs:complexContent>
 	</xs:complexType>
 	<xs:element name="EventButton" type="EventButtonType" substitutionGroup="ui:Frame"/>
+
+	<xs:complexType name="EventEditBoxType">
+		<xs:complexContent>
+			<xs:extension base="EditBoxType"/>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="EventEditBox" type="EventEditBoxType" substitutionGroup="ui:Frame"/>
 </xs:schema>
