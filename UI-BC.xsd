@@ -518,6 +518,13 @@
 						</xs:element>
 						<xs:element name="Color" type="ColorType"/>
 						<xs:element name="Gradient" type="GradientType"/>
+						<xs:element name="Animations">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element ref="AnimationGroup" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
 					</xs:choice>
 				</xs:sequence>
 				<xs:attribute name="file" type="xs:string"/>
@@ -824,6 +831,7 @@
 					</xs:choice>
 				</xs:sequence>
 				<xs:attribute name="font" type="xs:string"/>
+				<xs:attribute name="bytes" type="xs:int" default="0"/>
 				<xs:attribute name="letters" type="xs:int" default="0"/>
 				<xs:attribute name="blinkSpeed" type="xs:float" default="0.5"/>
 				<xs:attribute name="numeric" type="xs:boolean" default="false"/>
