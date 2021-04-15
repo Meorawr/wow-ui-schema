@@ -1338,6 +1338,8 @@
 				</xs:sequence>
 				<xs:attribute name="degrees" type="xs:float" default="0.0"/>
 				<xs:attribute name="radians" type="xs:float" default="0.0"/>
+				<xs:attribute name="x" type="xs:float" default="0.0"/>
+				<xs:attribute name="y" type="xs:float" default="0.0"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
