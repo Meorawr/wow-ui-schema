@@ -840,6 +840,9 @@
 				<xs:attribute name="ignoreArrows" type="xs:boolean" default="false"/>
 				<xs:attribute name="countInvisibleLetters" type="xs:boolean" default="false"/>
 				<xs:attribute name="invisibleBytes" type="xs:int"/>
+				<xs:attribute name="secureReferenceKey" type="xs:string"/>
+				<xs:attribute name="securityDisableSetText" type="xs:boolean" default="false"/>
+				<xs:attribute name="securityDisablePaste" type="xs:boolean" default="false"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
