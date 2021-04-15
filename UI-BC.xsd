@@ -815,6 +815,7 @@
 				<xs:attribute name="valueStep" type="xs:float"/>
 				<xs:attribute name="orientation" type="ui:ORIENTATION" default="VERTICAL"/>
 				<xs:attribute name="obeyStepOnDrag" type="xs:boolean"/>
+				<xs:attribute name="stepsPerPage" type="xs:int"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
