@@ -1064,6 +1064,7 @@
 				<xs:attribute name="drawBling" type="xs:boolean" default="false"/>
 				<xs:attribute name="drawSwipe" type="xs:boolean" default="false"/>
 				<xs:attribute name="rotation" type="xs:float" default="0.0"/>
+				<xs:attribute name="useCircularEdge" type="xs:boolean" default="false"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
