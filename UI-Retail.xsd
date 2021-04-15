@@ -57,7 +57,16 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="JUSTIFYTYPE">
+	<xs:simpleType name="JUSTIFYHTYPE">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="LEFT"/>
+			<xs:enumeration value="CENTER"/>
+			<xs:enumeration value="MIDDLE"/> <!-- Alias for CENTER. -->
+			<xs:enumeration value="RIGHT"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="JUSTIFYVTYPE">
 		<xs:restriction base="xs:NMTOKEN">
 			<xs:enumeration value="TOP"/>
 			<xs:enumeration value="CENTER"/>
@@ -383,8 +392,8 @@
 		<xs:attribute name="spacing" type="xs:float" default="0"/>
 		<xs:attribute name="outline" type="OUTLINETYPE" default="NONE"/>
 		<xs:attribute name="monochrome" type="xs:boolean" default="false"/>
-		<xs:attribute name="justifyV" type="JUSTIFYTYPE" default="MIDDLE"/>
-		<xs:attribute name="justifyH" type="JUSTIFYTYPE" default="CENTER"/>
+		<xs:attribute name="justifyV" type="JUSTIFYVTYPE" default="MIDDLE"/>
+		<xs:attribute name="justifyH" type="JUSTIFYHTYPE" default="CENTER"/>
 		<xs:attribute name="height" type="xs:float"/>
 		<xs:attribute name="fixedSize" type="xs:boolean" default="false"/>
 		<xs:attribute name="filter" type="xs:boolean" default="false"/>
@@ -569,8 +578,8 @@
 				<xs:attribute name="monochrome" type="xs:boolean" default="false"/>
 				<xs:attribute name="nonspacewrap" type="xs:boolean" default="false"/>
 				<xs:attribute name="wordwrap" type="xs:boolean" default="true"/>
-				<xs:attribute name="justifyV" type="JUSTIFYTYPE" default="MIDDLE"/>
-				<xs:attribute name="justifyH" type="JUSTIFYTYPE" default="CENTER"/>
+				<xs:attribute name="justifyV" type="JUSTIFYVTYPE" default="MIDDLE"/>
+				<xs:attribute name="justifyH" type="JUSTIFYHTYPE" default="CENTER"/>
 				<xs:attribute name="maxLines" type="xs:unsignedInt" default="0"/>
 				<xs:attribute name="indented" type="xs:boolean" default="false"/>
 				<xs:attribute name="alpha" type="xs:float" default="1.0"/>
