@@ -806,6 +806,7 @@
 					</xs:choice>
 				</xs:sequence>
 				<xs:attribute name="font" type="xs:string"/>
+				<xs:attribute name="bytes" type="xs:int" default="0"/>
 				<xs:attribute name="letters" type="xs:int" default="0"/>
 				<xs:attribute name="blinkSpeed" type="xs:float" default="0.5"/>
 				<xs:attribute name="numeric" type="xs:boolean" default="false"/>
