@@ -1259,7 +1259,7 @@
 
 	<xs:simpleType name="AnimOrderType">
 		<xs:restriction base="xs:int">
-			<xs:minInclusive value="1"/>
+			<xs:minInclusive value="0"/>
 			<xs:maxInclusive value="100"/>
 		</xs:restriction>
 	</xs:simpleType>
