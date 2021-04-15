@@ -1197,13 +1197,20 @@
 	</xs:complexType>
 	<xs:element name="FogOfWarFrame" type="FogOfWarFrameType" substitutionGroup="ui:Frame"/>
 
+	<xs:complexType name="ViewInsetType">
+		<xs:attribute name="left" type="xs:int" use="optional"/>
+		<xs:attribute name="right" type="xs:int" use="optional"/>
+		<xs:attribute name="top" type="xs:int" use="optional"/>
+		<xs:attribute name="bottom" type="xs:int" use="optional"/>
+	</xs:complexType>
+
 	<xs:complexType name="ModelSceneType">
 		<xs:complexContent>
 			<xs:extension base="FrameType">
 				<xs:sequence minOccurs="0">
 					<xs:choice maxOccurs="unbounded">
 						<xs:element name="FogColor" type="ColorType"/>
-
+						<xs:element name="ViewInsets" type="ViewInsetType"/>
 						<xs:element name="Actors">
 							<xs:complexType>
 								<xs:sequence>
