@@ -26,6 +26,7 @@
 			<xs:enumeration value="FULLSCREEN"/>
 			<xs:enumeration value="FULLSCREEN_DIALOG"/>
 			<xs:enumeration value="TOOLTIP"/>
+			<xs:enumeration value="BLIZZARD"/>
 		</xs:restriction>
 	</xs:simpleType>
 
