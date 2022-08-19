@@ -523,6 +523,8 @@
 		<xs:attribute name="atlas" type="xs:string"/>
 		<xs:attribute name="useAtlasSize" type="xs:boolean"/>
 		<xs:attribute name="desaturated" type="xs:boolean" default="false"/>
+		<xs:attribute name="nounload" type="xs:boolean" default="false"/>
+		<xs:attribute name="nolazyload" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
 
 	<xs:complexType name="TextureType">
@@ -687,6 +689,8 @@
 		<xs:attribute name="fixedFrameStrata" type="xs:boolean" default="false"/>
 		<xs:attribute name="fixedFrameLevel" type="xs:boolean" default="false"/>
 		<xs:attribute name="frameBuffer" type="xs:boolean" default="false"/>
+		<xs:attribute name="jumpNavigateEnabled" type="xs:boolean" default="false"/>
+		<xs:attribute name="jumpNavigateStart" type="xs:string" default="false"/>
 	</xs:attributeGroup>
 
 	<xs:complexType name="FrameType">
@@ -702,7 +706,6 @@
 	</xs:complexType>
 
 	<xs:element name="FrameField" abstract="true"/>
-	<xs:element name="TitleRegion" type="ui:LayoutFrameType" substitutionGroup="FrameField"/>
 	<xs:element name="ResizeBounds" substitutionGroup="FrameField">
 		<xs:complexType>
 			<xs:sequence>
@@ -862,6 +865,7 @@
 				<xs:attribute name="valueStep" type="xs:float"/>
 				<xs:attribute name="orientation" type="ui:ORIENTATION" default="VERTICAL"/>
 				<xs:attribute name="obeyStepOnDrag" type="xs:boolean"/>
+				<xs:attribute name="stepsPerPage" type="xs:float"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
