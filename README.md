@@ -22,6 +22,9 @@ These files are not precisely identical to the ones shipped by Blizzard in their
 * Added `jumpNavigateStart` (string?) to `<Frame>` elements.
   * Behavior is unknown; no usages in UI source code.
   * Has no equivalent Widget script API.
+* Added `noanimalpha` (boolean) attribute to `<Texture>` elements.
+  * Behavior is unknown; no usages in UI source code. May prevent alpha changes with `<Alpha>` animations?
+  * Has no equivalent Widget script API.
 * Added `nolazyload` (boolean) attribute to `<Texture>` elements.
   * (Untested) If set to true, any assigned texture asset will be loaded immediately regardless of object visibility.
   * Has no equivalent Widget script API.

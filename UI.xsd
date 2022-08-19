@@ -523,8 +523,9 @@
 		<xs:attribute name="atlas" type="xs:string"/>
 		<xs:attribute name="useAtlasSize" type="xs:boolean"/>
 		<xs:attribute name="desaturated" type="xs:boolean" default="false"/>
-		<xs:attribute name="nounload" type="xs:boolean" default="false"/>
+		<xs:attribute name="noanimalpha" type="xs:boolean" default="false"/>
 		<xs:attribute name="nolazyload" type="xs:boolean" default="false"/>
+		<xs:attribute name="nounload" type="xs:boolean" default="false"/>
 	</xs:attributeGroup>
 
 	<xs:complexType name="TextureType">
