@@ -429,7 +429,7 @@
 	<xs:element name="FontFamily" type="FontFamilyType" substitutionGroup="UiField"/>
 
 	<xs:complexType name="LayoutFrameRefType"/>
-	<xs:element name="LayoutFrameRef" type="LayoutFrameRefType" substitutionGroup="UiField"/>
+	<xs:element name="LayoutFrameRef" abstract="true" type="LayoutFrameRefType" substitutionGroup="UiField"/>
 
 	<xs:attributeGroup name="LayoutFrameAttributes">
 		<xs:attribute name="name" type="xs:string"/>
@@ -660,7 +660,7 @@
 			<xs:extension base="LayoutFrameRefType"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="FrameRef" type="FrameRefType" substitutionGroup="LayoutFrameRef"/>
+	<xs:element name="FrameRef" abstract="true" type="FrameRefType" substitutionGroup="LayoutFrameRef"/>
 
 	<xs:attributeGroup name="FrameAttributes">
 		<xs:attributeGroup ref="LayoutFrameAttributes"/>
@@ -1401,7 +1401,8 @@
 		<xs:attribute name="order" type="AnimOrderType" default="1"/>
 		<xs:attribute name="smoothing" type="ANIMSMOOTHTYPE" default="NONE"/>
 	</xs:complexType>
-	<xs:element name="Animation" type="AnimationType" substitutionGroup="UiField"/>
+	<xs:element name="AnimationRef" abstract="true" substitutionGroup="UiField"/>
+	<xs:element name="Animation" type="AnimationType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="TranslationType">
 		<xs:complexContent>
@@ -1411,14 +1412,14 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="Translation" type="TranslationType" substitutionGroup="Animation"/>
+	<xs:element name="Translation" type="TranslationType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="LineTranslationType">
 		<xs:complexContent>
 			<xs:extension base="TranslationType"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="LineTranslation" type="LineTranslationType" substitutionGroup="Animation"/>
+	<xs:element name="LineTranslation" type="LineTranslationType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="RotationType">
 		<xs:complexContent>
@@ -1431,7 +1432,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="Rotation" type="RotationType" substitutionGroup="Animation"/>
+	<xs:element name="Rotation" type="RotationType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="ScaleType">
 		<xs:complexContent>
@@ -1448,14 +1449,14 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="Scale" type="ScaleType" substitutionGroup="Animation"/>
+	<xs:element name="Scale" type="ScaleType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="LineScaleType">
 		<xs:complexContent>
 			<xs:extension base="ScaleType"/>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="LineScale" type="LineScaleType" substitutionGroup="Animation"/>
+	<xs:element name="LineScale" type="LineScaleType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="AlphaType">
 		<xs:complexContent>
@@ -1465,7 +1466,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="Alpha" type="AlphaType" substitutionGroup="Animation"/>
+	<xs:element name="Alpha" type="AlphaType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="ControlPointsType">
 		<xs:sequence minOccurs="0">
@@ -1494,7 +1495,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="Path" type="PathType" substitutionGroup="Animation"/>
+	<xs:element name="Path" type="PathType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="FlipBookType">
 		<xs:complexContent>
@@ -1507,7 +1508,7 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="FlipBook" type="FlipBookType" substitutionGroup="Animation"/>
+	<xs:element name="FlipBook" type="FlipBookType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="TextureCoordTranslationType">
 		<xs:complexContent>
@@ -1517,12 +1518,12 @@
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>
-	<xs:element name="TextureCoordTranslation" type="TextureCoordTranslationType" substitutionGroup="Animation"/>
+	<xs:element name="TextureCoordTranslation" type="TextureCoordTranslationType" substitutionGroup="AnimationRef"/>
 
 	<xs:complexType name="AnimationGroupType">
 		<xs:sequence minOccurs="0">
 			<xs:choice maxOccurs="unbounded">
-				<xs:element ref="Animation"/>
+				<xs:element ref="AnimationRef"/>
 				<xs:element name="Scripts" type="AnimGroupScriptsType"/>
 			</xs:choice>
 		</xs:sequence>
