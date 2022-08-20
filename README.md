@@ -33,5 +33,8 @@ These files are not precisely identical to the ones shipped by Blizzard in their
   * Has no equivalent Widget script API.
 * Added `stepsPerPage` (float) attribute to `<Slider>` elements.
   * Equivalent to [Slider:SetStepsPerPage](https://wowpedia.fandom.com/wiki/API_Slider_SetStepsPerPage)().
+* Changed `<Origin>` subelement of `<Animation>` elements.
+  * Removed from base `<Animation>` element type, as origin is only applicable to some subtypes.
+  * Added `<Origin>` to `<Rotation>` and `<Scale>` elements (and derivations thereof).
 * Removed `<TitleRegion>` element.
   * This was removed in [Patch 7.1.0](https://wowpedia.fandom.com/wiki/Patch_7.1.0/API_changes).

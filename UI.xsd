@@ -1386,7 +1386,6 @@
 			<xs:choice maxOccurs="unbounded">
 				<xs:element name="Scripts" type="AnimScriptsType"/>
 				<xs:element name="KeyValues" type="KeyValuesType"/>
-				<xs:element name="Origin" type="AnimOriginType"/>
 			</xs:choice>
 		</xs:sequence>
 		<xs:attribute name="name" type="xs:string"/>
@@ -1424,6 +1423,9 @@
 	<xs:complexType name="RotationType">
 		<xs:complexContent>
 			<xs:extension base="AnimationType">
+				<xs:sequence minOccurs="0">
+					<xs:element name="Origin" type="AnimOriginType"/>
+				</xs:sequence>
 				<xs:attribute name="degrees" type="xs:float" default="0.0"/>
 				<xs:attribute name="radians" type="xs:float" default="0.0"/>
 			</xs:extension>
@@ -1434,6 +1436,9 @@
 	<xs:complexType name="ScaleType">
 		<xs:complexContent>
 			<xs:extension base="AnimationType">
+				<xs:sequence minOccurs="0">
+					<xs:element name="Origin" type="AnimOriginType"/>
+				</xs:sequence>
 				<xs:attribute name="scaleX" type="xs:float" default="1.0"/>
 				<xs:attribute name="scaleY" type="xs:float" default="1.0"/>
 				<xs:attribute name="fromScaleX" type="xs:float" default="1.0"/>
