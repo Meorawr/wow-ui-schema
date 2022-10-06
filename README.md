@@ -14,31 +14,6 @@ PRs are welcome to provide adjustments for any missing attributes, elements, or 
 
 ## Modifications
 
-These files are not precisely identical to the ones shipped by Blizzard in their interface code and have the following changes made.
+These files may not be precisely identical to the ones shipped by Blizzard in their interface code. Any changes will be listed below.
 
-* Added abstract `AnimationRef` element.
-  * This is used as a substitution group target instead of `Animation` as non-abstract substitution groups used as references can have issues with completions provided by [some XML language servers](https://github.com/eclipse/lemminx).
-* Added `jumpNavigateEnabled` (boolean) to `<Frame>` elements.
-  * Behavior is unknown; no usages in UI source code.
-  * Has no equivalent Widget script API.
-* Added `jumpNavigateStart` (string?) to `<Frame>` elements.
-  * Behavior is unknown; no usages in UI source code.
-  * Has no equivalent Widget script API.
-* Added `noanimalpha` (boolean) attribute to `<Texture>` elements.
-  * Behavior is unknown; no usages in UI source code. May prevent alpha changes with `<Alpha>` animations?
-  * Has no equivalent Widget script API.
-* Added `nolazyload` (boolean) attribute to `<Texture>` elements.
-  * (Untested) If set to true, any assigned texture asset will be loaded immediately regardless of object visibility.
-  * Has no equivalent Widget script API.
-* Added `nounload` (boolean) attribute to `<Texture>` elements.
-  * If set to true, the assigned texture asset will not be unloaded when the texture object is no longer visible.
-  * Has no equivalent Widget script API.
-* Added `stepsPerPage` (float) attribute to `<Slider>` elements.
-  * Equivalent to [Slider:SetStepsPerPage](https://wowpedia.fandom.com/wiki/API_Slider_SetStepsPerPage)().
-* Changed `LayoutFrameRef` and `FrameRef` element definition to abstract.
-  * As with AnimationRef, non-abstract substitution groups used as references can have issues with completions provided by [some XML language servers](https://github.com/eclipse/lemminx).
-* Changed `<Origin>` subelement of `<Animation>` elements.
-  * Removed from base `<Animation>` element type, as origin is only applicable to some subtypes.
-  * Added `<Origin>` to `<Rotation>` and `<Scale>` elements (and derivations thereof).
-* Removed `<TitleRegion>` element.
-  * This was removed in [Patch 7.1.0](https://wowpedia.fandom.com/wiki/Patch_7.1.0/API_changes).
+* No modifications as of build 10.0.2.45969.
